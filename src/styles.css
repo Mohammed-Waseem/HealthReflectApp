@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+.redcolor
+{
+  background-color:lightblue;
+}
+.footer
+{
+  background-color: rgb(248, 80, 108);
+}
+.myspace{
+  
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+
+}
+
+.spacer {
+  margin: 10px;
+}
+.leftmargin{
+  margin-left: 1000px;
+}
+.mymargin{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
