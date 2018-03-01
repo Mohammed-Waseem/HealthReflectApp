@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-toolbar color="warn" id='destination'>
+<button mat-icon-button>
+  <mat-icon mat-icon-button (click)="onHome()">keyboard_backspace</mat-icon>
+  <router-outlet></router-outlet>
+</button>
+<span (click)="onHome()">Health Reflect</span>
+</mat-toolbar>
+  <router-outlet></router-outlet>
+  
+  <mat-card class="footer">
+    <span>
+    <a mat-icon-button color="accent" class="upbutton" (click)="goTo('destination')">
+          <mat-icon>keyboard_arrow_up</mat-icon>
+        </a></span>
+    <span style="color:antiquewhite">© 2018 Health Reflect
+  </span>
+</mat-card>
+  

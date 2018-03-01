@@ -1,0 +1,31 @@
+
+<mat-card >
+    <div [@listAnimat]="state">
+ <img mat-card-image  src="./assets/{{message.image}}" height="400px">
+</div>
+ <mat-card-content >
+        <div [@focusPanel]="state">
+        <mat-card-title style="font-weight:bold">
+            {{message.name}}
+            <mat-divider></mat-divider>
+            
+         </mat-card-title>
+         <span style="margin-bottom:20px"></span>
+     {{message.longDesc}}
+     </div>
+ </mat-card-content>
+ <mat-divider></mat-divider>
+
+ <mat-card-actions>
+     
+        <mat-nav-list class="redcolor">
+            <mat-list-item>
+           <span matLine style="color:brown">click on download button</span> 
+            <button mat-icon-button mat-list-item>
+            <mat-icon color="warn" >file_download</mat-icon>
+            </button>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-card-actions>
+    </mat-card>
+    
