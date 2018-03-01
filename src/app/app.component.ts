@@ -16,5 +16,8 @@ export class AppComponent {
 onHome(){
   this.router.navigate(['gamelist']);
 }
-
+goTo(location: string): void {
+  window.location.hash = '';
+  window.location.hash = location;
+}
 }

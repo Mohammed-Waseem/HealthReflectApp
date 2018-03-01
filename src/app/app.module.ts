@@ -19,17 +19,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
-
-
-
-
-
-
-
-
-
 import {MatSidenavModule, MatSidenav, MatSidenavContent, MatSidenavContainer} from '@angular/material/sidenav';
 import { GamedescriptionComponent } from './gamedescription/gamedescription.component';
 import { NewgameComponent } from './newgame/newgame.component';
@@ -75,9 +64,9 @@ import { FilterPipe } from './filter.pipe';
     FormsModule,
 
     RouterModule.forRoot([
-      {path:'gamelist',component:GamelistComponent, pathMatch: 'full' },
-      {path:'gamedesc',component:GamedescriptionComponent},
-      {path:'newgame',component:NewgameComponent}
+      {path:'gamelist',component:GamelistComponent, pathMatch: 'full',data: {depth: 1} },
+      {path:'gamedesc',component:GamedescriptionComponent,data: {depth: 2}},
+      {path:'newgame',component:NewgameComponent,data: {depth: 3}}
 
     ])
   ],

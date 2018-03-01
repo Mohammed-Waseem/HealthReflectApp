@@ -1,4 +1,5 @@
-<mat-card  *ngFor="let images of Imagess; let i = index" class="mymargin redcolor">
+<div [@listAnimation]="Imagess.length">
+<mat-card  *ngFor="let images of Imagess; let i = index"  class="mymargin redcolor">
     <a routerLink="employees" (click)="onSelect(i)">
 
   <img mat-card-image src="./assets/{{images.image}}" height="400px" align="middle">
@@ -20,6 +21,8 @@
           </mat-accordion>
     </mat-card-content>
 </mat-card>
+</div>
+<div [@listNewGame]= "NewGame.length">
 <mat-card class="redcolor mymargin">
     <mat-card-title style="font-weight:bold" (click)="routeNewGame()">
       <mat-nav-list>
@@ -44,3 +47,4 @@
       </mat-nav-list>
       
 </mat-card>
+</div>

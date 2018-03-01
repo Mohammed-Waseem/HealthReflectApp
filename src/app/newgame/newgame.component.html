@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card [@searchList]="NewGame.length">
   <form class="example-form">
     <mat-form-field class="example-full-width">
       <input matInput  [(ngModel)]="prices" name="first" placeholder="Search Price wise ex-free
@@ -7,6 +7,7 @@
     </form>
   </mat-card>
 <mat-nav-list class="redcolor">
+    <div [@newList]="NewGame.length">
     <mat-list-item *ngFor="let item of NewGame | searchPipe:'price':prices">
       <img matListAvatar src="./assets/{{item.image}}" alt="...">
       <h3 matLine> {{item.name}} </h3>
@@ -17,4 +18,5 @@
           <mat-icon>file_download</mat-icon>
        </button>
     </mat-list-item>
+    </div>
   </mat-nav-list>
